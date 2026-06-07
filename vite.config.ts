@@ -3,8 +3,10 @@ import react from "@vitejs/plugin-react";
 import tsconfigPaths from "vite-tsconfig-paths";
 import tailwindcss from "@tailwindcss/vite";
 
+import { cloudflare } from "@cloudflare/vite-plugin";
+
 export default defineConfig({
   base: "/", // Ensure this is exactly '/'
-  plugins: [react(), tsconfigPaths(), tailwindcss()],
+  plugins: [react(), tsconfigPaths(), tailwindcss(), cloudflare()],
   server: { host: "::", port: 8080 },
 });
