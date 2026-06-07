@@ -4,6 +4,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
+  base: "/", // Ensure this is exactly '/'
   plugins: [react(), tsconfigPaths(), tailwindcss()],
   server: { host: "::", port: 8080 },
 });
