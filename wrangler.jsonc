@@ -1,5 +1,7 @@
 {
-  "name": "joysmartbranding",
-  "compatibility_date": "2024-01-01",
-  "assets": "./dist"
+  "name": "lovable-joy",
+  "compatibility_date": "2024-04-03",
+  "assets": {
+    "directory": "./dist"
+  }
 }
