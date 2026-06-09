@@ -8,7 +8,7 @@ import outdoor from "@/assets/outdoor.jpg";
 import design from "@/assets/design.jpg";
 
 const marqueeItems = [
-  "Polo T-Shirts", "Caps", "Hoodies", "Reflectors", "Umbrellas", "Water Bottles",
+  "Polo T-Shirts", "Caps", "Hoodies", "Reflectors", "Branded Mugs", "Branded Glasses",
   "Leso & Fabrics", "Half Jackets", "Graphic Design", "Outdoor Branding",
 ];
 

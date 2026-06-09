@@ -16,7 +16,7 @@ const productsQuery = queryOptions({
 export default function StorePage() {
   useSeo({
     title: "Store — Joysmart Branding Services",
-    description: "Shop branded promotional merchandise online — polos, caps, bottles, umbrellas and more.",
+    description: "Shop branded promotional merchandise online — polos, caps, mugs, glasses and more.",
     canonical: "/store",
     meta: [
       { property: "og:title", content: "Store — Joysmart Branding Services" },
@@ -86,6 +86,31 @@ function ProductCard({ product }: { product: ShopifyProduct }) {
   const image = product.node.images.edges[0]?.node;
   const price = product.node.priceRange.minVariantPrice;
 
+  // Local image overrides for products that don't have images in Shopify yet
+  const localImageMap: Record<string, string> = {
+    "branded-cap": "/Branded caps.jpg",
+    "premium-polo-t-shirt": "/premium polo.jpg",
+    "round-neck-t-shirt": "/round neck.jpg",
+    "reflector-safety-wear": "/safetywear.jpg",
+    "branded-hoodie": "/brandedhoodies.jpg",
+    "branded-half-jacket": "/brandedhalfjacket.jpg",
+    "outdoor-branding-solutions": "/3doutdoor.jpg",
+    "corporate-promotional-fabrics": "/promotional.jpg",
+    "branded-leso-fabric": "/lesso-and-fabrics.jpg",
+    "graphic-design-services": "/design.jpg",
+    "branded-umbrella": "/brandedmugs.jpg",
+    "branded-water-bottle": "/brandedwaterbottles.jpg",
+  };
+
+  // Local title overrides
+  const localNameMap: Record<string, string> = {
+    "branded-umbrella": "Branded Mugs",
+    "branded-water-bottle": "Branded Glasses",
+  };
+
+  const displayImageUrl = localImageMap[product.node.handle] || image?.url;
+  const displayTitle = localNameMap[product.node.handle] || product.node.title;
+
   const handleAdd = async (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
@@ -106,10 +131,10 @@ function ProductCard({ product }: { product: ShopifyProduct }) {
       className="group flex flex-col overflow-hidden rounded-3xl border border-border bg-card transition-shadow hover:shadow-brand"
     >
       <div className="aspect-square overflow-hidden bg-secondary/10">
-        {image ? (
+        {displayImageUrl ? (
           <img
-            src={image.url}
-            alt={image.altText ?? product.node.title}
+            src={displayImageUrl}
+            alt={image?.altText ?? displayTitle}
             loading="lazy"
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
@@ -120,7 +145,7 @@ function ProductCard({ product }: { product: ShopifyProduct }) {
         )}
       </div>
       <div className="flex flex-1 flex-col gap-3 p-6">
-        <h3 className="text-display text-xl leading-tight">{product.node.title}</h3>
+        <h3 className="text-display text-xl leading-tight">{displayTitle}</h3>
         <div className="text-lg font-semibold text-primary">
           {price.currencyCode} {parseFloat(price.amount).toFixed(2)}
         </div>

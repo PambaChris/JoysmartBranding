@@ -17,9 +17,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <Link to="/" className="flex items-center gap-2">
-          <span className="grid h-9 w-9 place-items-center rounded-md bg-primary text-primary-foreground text-display text-lg">J</span>
-          <span className="text-display text-lg tracking-tight">JOYSMART</span>
+        <Link to="/" className="flex items-center gap-3">
+          <img src="/joysmart-logo.svg" alt="JOYSMART" className="h-10 w-auto" />
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
           {nav.map((n) => (

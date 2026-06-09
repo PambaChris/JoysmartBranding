@@ -58,6 +58,31 @@ function ProductDetail({ handle }: { handle: string }) {
   const variant = variants.find((v) => v.id === selectedVariantId) ?? variants[0];
   const images: Image[] = product.images.edges.map((e: { node: Image }) => e.node);
 
+  // Local image overrides
+  const localImageMap: Record<string, string> = {
+    "branded-cap": "/Branded caps.jpg",
+    "premium-polo-t-shirt": "/premium polo.jpg",
+    "round-neck-t-shirt": "/round neck.jpg",
+    "reflector-safety-wear": "/safetywear.jpg",
+    "branded-hoodie": "/brandedhoodies.jpg",
+    "branded-half-jacket": "/brandedhalfjacket.jpg",
+    "outdoor-branding-solutions": "/3doutdoor.jpg",
+    "corporate-promotional-fabrics": "/promotional.jpg",
+    "branded-leso-fabric": "/lesso-and-fabrics.jpg",
+    "graphic-design-services": "/design.jpg",
+    "branded-umbrella": "/brandedmugs.jpg",
+    "branded-water-bottle": "/brandedwaterbottles.jpg",
+  };
+
+  // Local title overrides
+  const localNameMap: Record<string, string> = {
+    "branded-umbrella": "Branded Mugs",
+    "branded-water-bottle": "Branded Glasses",
+  };
+
+  const mainImageUrl = localImageMap[handle] || images[0]?.url;
+  const displayTitle = localNameMap[handle] || product.title;
+
   const productNode = {
     node: {
       ...product,
@@ -84,8 +109,12 @@ function ProductDetail({ handle }: { handle: string }) {
     <section className="mx-auto grid max-w-7xl gap-12 px-6 pt-12 pb-24 md:grid-cols-2 md:pt-20">
       <div className="space-y-4">
         <div className="aspect-square overflow-hidden rounded-3xl bg-secondary/10">
-          {images[0] && (
-            <img src={images[0].url} alt={images[0].altText ?? product.title} className="h-full w-full object-cover" />
+          {mainImageUrl ? (
+            <img src={mainImageUrl} alt={images[0]?.altText ?? displayTitle} className="h-full w-full object-cover" />
+          ) : (
+            <div className="flex h-full w-full items-center justify-center text-muted-foreground">
+              <Loader2 className="h-8 w-8 animate-spin" />
+            </div>
           )}
         </div>
         {images.length > 1 && (
@@ -102,7 +131,7 @@ function ProductDetail({ handle }: { handle: string }) {
         <Link to="/store" className="text-sm text-muted-foreground hover:text-foreground">
           ← Back to store
         </Link>
-        <h1 className="mt-4 text-display text-4xl md:text-6xl">{product.title}</h1>
+        <h1 className="mt-4 text-display text-4xl md:text-6xl">{displayTitle}</h1>
         <div className="mt-4 text-3xl font-semibold text-primary">
           {variant.price.currencyCode} {parseFloat(variant.price.amount).toFixed(2)}
         </div>

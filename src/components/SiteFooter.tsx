@@ -6,7 +6,7 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
-            <div className="text-display text-3xl">JOYSMART</div>
+            <img src="/joysmart-logo.svg" alt="JOYSMART" className="h-10 w-auto invert brightness-0" />
             <p className="mt-4 max-w-sm text-sm text-cream/70">
               Branding & promotional merchandise that turns your identity into something
               people can wear, hold, and remember.
@@ -24,8 +24,9 @@ export function SiteFooter() {
           <div>
             <div className="text-xs font-semibold uppercase tracking-widest text-primary">Contact</div>
             <ul className="mt-4 space-y-2 text-sm text-cream/80">
-              <li>hello@joysmart.co</li>
-              <li>+254 700 000 000</li>
+              <li>Joysmartventure@gmail.com</li>
+              <li>+254 712 112 778</li>
+              <li>+254 734 236 242</li>
               <li>Nairobi, Kenya</li>
             </ul>
           </div>

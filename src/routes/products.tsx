@@ -11,8 +11,8 @@ const products = [
   "Hoodies",
   "Half Jackets",
   "Leso & Branded Fabrics",
-  "Umbrellas",
-  "Water Bottles",
+  "Branded Mugs",
+  "Branded Glasses",
   "Corporate & Promotional Fabrics",
   "Graphic Design Services",
   "Outdoor Branding Solutions",
@@ -21,7 +21,7 @@ const products = [
 export default function ProductsPage() {
   useSeo({
     title: "Products — Joysmart Branding Services",
-    description: "Premium polo t-shirts, caps, hoodies, reflectors, umbrellas, water bottles, leso and more — all brand-ready.",
+    description: "Premium polo t-shirts, caps, hoodies, reflectors, mugs, glasses, leso and more — all brand-ready.",
     canonical: "/products",
     meta: [
       { property: "og:title", content: "Products — Joysmart Branding Services" },

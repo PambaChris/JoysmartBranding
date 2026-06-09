@@ -28,8 +28,8 @@ export default function ContactPage() {
       <section className="mx-auto grid max-w-7xl gap-12 px-6 pb-24 md:grid-cols-12">
         <div className="md:col-span-5 space-y-8">
           {[
-            { Icon: Mail, label: "Email", value: "hello@joysmart.co" },
-            { Icon: Phone, label: "Phone", value: "+254 700 000 000" },
+            { Icon: Mail, label: "Email", value: "Joysmartventure@gmail.com" },
+            { Icon: Phone, label: "Phone", value: "+254 712 112 778 / +254 734 236 242" },
             { Icon: MapPin, label: "Studio", value: "Nairobi, Kenya" },
           ].map(({ Icon, label, value }) => (
             <div key={label} className="flex items-start gap-4">
