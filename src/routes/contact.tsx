@@ -2,6 +2,7 @@ import { useState } from "react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { useSeo } from "@/lib/seo";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function ContactPage() {
   useSeo({
@@ -41,6 +42,36 @@ export default function ContactPage() {
               </div>
             </div>
           ))}
+
+          <div className="flex items-start gap-4">
+            <div className="grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </div>
+            <div>
+              <div className="text-xs uppercase tracking-widest text-muted-foreground">Facebook</div>
+              <Link to="https://facebook.com/Joysmart-Branding-Services" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold hover:text-primary">Joysmart Branding Services</Link>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-4">
+            <div className="grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tiktok"><path d="M9 12v10h4V12c0-1.7 1.3-3 3-3V5a3 3 0 0 0-3-3H9a3 3 0 0 0-3 3v4c0 1.7 1.3 3 3 3z"/><path d="M12 12c0-1.7 1.3-3 3-3V5a3 3 0 0 0-3-3H9a3 3 0 0 0-3 3v4c0 1.7 1.3 3 3 3z"/></svg>
+            </div>
+            <div>
+              <div className="text-xs uppercase tracking-widest text-muted-foreground">TikTok</div>
+              <Link to="https://tiktok.com/@joysmartbranding" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold hover:text-primary">@joysmartbranding</Link>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-4">
+            <div className="grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.5" y1="6.5" y2="6.5"/></svg>
+            </div>
+            <div>
+              <div className="text-xs uppercase tracking-widest text-muted-foreground">Instagram</div>
+              <Link to="https://instagram.com/Joysmartbranding" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold hover:text-primary">@Joysmartbranding</Link>
+            </div>
+          </div>
 
           <div className="rounded-3xl bg-ink p-8 text-cream">
             <div className="text-display text-3xl">Hours</div>
