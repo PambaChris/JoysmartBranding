@@ -51,8 +51,8 @@ export default function HomePage() {
               <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-brand transition-transform hover:scale-105">
                 Start a project <ArrowUpRight className="h-4 w-4" />
               </Link>
-              <Link to="/products" className="inline-flex items-center gap-2 rounded-full border border-ink/20 px-6 py-3 text-sm font-semibold transition-colors hover:bg-ink hover:text-cream">
-                Browse products
+              <Link to="/store" className="inline-flex items-center gap-2 rounded-full border border-ink/20 px-6 py-3 text-sm font-semibold transition-colors hover:bg-ink hover:text-cream">
+               Browse products
               </Link>
             </div>
           </div>
