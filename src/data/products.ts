@@ -243,4 +243,53 @@ export const localProducts = [
       options: [],
     },
   },
+  // --- Even Newer Additions ---
+  {
+    node: {
+      id: "imported-polo",
+      title: "Imported Polo Shirt",
+      handle: "imported-polo-shirt",
+      description: "Premium imported polo shirts.",
+      priceRange: { minVariantPrice: { amount: "1800.00", currencyCode: "KES" } },
+      images: { edges: [{ node: { url: "/Imported polo shirt.jpeg", altText: "Imported Polo Shirt" } }] },
+      variants: { edges: [{ node: { id: "v15", title: "Standard", price: { amount: "1800.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [] } }] },
+      options: [],
+    },
+  },
+  {
+    node: {
+      id: "broadbase-roll-up",
+      title: "Broadbase Roll-up Banners",
+      handle: "broadbase-roll-up-banners",
+      description: "Stable and professional broadbase roll-up banners.",
+      priceRange: { minVariantPrice: { amount: "4500.00", currencyCode: "KES" } },
+      images: { edges: [{ node: { url: "/Broadbase Roll-up banners.jpg", altText: "Broadbase Roll-up Banners" } }] },
+      variants: { edges: [{ node: { id: "v16", title: "Standard", price: { amount: "4500.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [] } }] },
+      options: [],
+    },
+  },
+  {
+    node: {
+      id: "corporate-gifting",
+      title: "Corporate Giftings",
+      handle: "corporate-giftings",
+      description: "Professional corporate gifting solutions.",
+      priceRange: { minVariantPrice: { amount: "3000.00", currencyCode: "KES" } },
+      images: { edges: [{ node: { url: "/Corporate giftings.jpg", altText: "Corporate Giftings" } }] },
+      variants: { edges: [{ node: { id: "v17", title: "Standard", price: { amount: "3000.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [] } }] },
+      options: [],
+    },
+  },
+  {
+    node: {
+      id: "stickers",
+      title: "Stickers",
+      handle: "stickers",
+      description: "Custom branded stickers for branding.",
+      priceRange: { minVariantPrice: { amount: "20.00", currencyCode: "KES" } },
+      images: { edges: [{ node: { url: "/Srickers.jpg", altText: "Stickers" } }] },
+      variants: { edges: [{ node: { id: "v18", title: "Standard", price: { amount: "20.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [] } }] },
+      options: [],
+    },
+  },
 ];
