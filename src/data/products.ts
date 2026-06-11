@@ -73,7 +73,7 @@ export const localProducts = [
     },
   },
 
-  // --- New Products with Corrected Images ---
+  // --- New Products ---
   {
     node: {
       id: "diaries-notebooks",
@@ -179,6 +179,67 @@ export const localProducts = [
       priceRange: { minVariantPrice: { amount: "4000.00", currencyCode: "KES" } },
       images: { edges: [{ node: { url: "/teardrops.jpg", altText: "Teardrops" } }] },
       variants: { edges: [{ node: { id: "v9", title: "Standard", price: { amount: "4000.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [] } }] },
+      options: [],
+    },
+  },
+  // --- Newest Additions ---
+  {
+    node: {
+      id: "biro-pens",
+      title: "Biro Pens Branding",
+      handle: "biro-pens-branding",
+      description: "Custom branding on quality biro pens.",
+      priceRange: { minVariantPrice: { amount: "50.00", currencyCode: "KES" } },
+      images: { edges: [{ node: { url: "/Biro pens branding.jpg", altText: "Biro Pens Branding" } }] },
+      variants: { edges: [{ node: { id: "v10", title: "Standard", price: { amount: "50.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [] } }] },
+      options: [],
+    },
+  },
+  {
+    node: {
+      id: "wooden-crafts",
+      title: "Wooden Crafts",
+      handle: "wooden-crafts",
+      description: "Handcrafted and custom branded wooden items.",
+      priceRange: { minVariantPrice: { amount: "1500.00", currencyCode: "KES" } },
+      images: { edges: [{ node: { url: "/Wooden Crafts.jpg", altText: "Wooden Crafts" } }] },
+      variants: { edges: [{ node: { id: "v11", title: "Standard", price: { amount: "1500.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [] } }] },
+      options: [],
+    },
+  },
+  {
+    node: {
+      id: "maasai-fleece",
+      title: "Maasai Fleece",
+      handle: "maasai-fleece",
+      description: "High-quality branded Maasai fleece.",
+      priceRange: { minVariantPrice: { amount: "2200.00", currencyCode: "KES" } },
+      images: { edges: [{ node: { url: "/Maasai fleece.jpg", altText: "Maasai Fleece" } }] },
+      variants: { edges: [{ node: { id: "v12", title: "Standard", price: { amount: "2200.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [] } }] },
+      options: [],
+    },
+  },
+  {
+    node: {
+      id: "vehicle-branding",
+      title: "Vehicle Branding",
+      handle: "vehicle-branding",
+      description: "Professional vehicle branding services.",
+      priceRange: { minVariantPrice: { amount: "5000.00", currencyCode: "KES" } },
+      images: { edges: [{ node: { url: "/Vehicle branding.jpg", altText: "Vehicle Branding" } }] },
+      variants: { edges: [{ node: { id: "v13", title: "Standard", price: { amount: "5000.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [] } }] },
+      options: [],
+    },
+  },
+  {
+    node: {
+      id: "media-banners",
+      title: "Media Banners",
+      handle: "media-banners",
+      description: "Large format media banners for events.",
+      priceRange: { minVariantPrice: { amount: "3000.00", currencyCode: "KES" } },
+      images: { edges: [{ node: { url: "/Media banners.jpg", altText: "Media Banners" } }] },
+      variants: { edges: [{ node: { id: "v14", title: "Standard", price: { amount: "3000.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [] } }] },
       options: [],
     },
   },
