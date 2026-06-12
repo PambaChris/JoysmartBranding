@@ -8,8 +8,16 @@ export const localProducts = [
       description: "Premium quality branded caps.",
       priceRange: { minVariantPrice: { amount: "500.00", currencyCode: "KES" } },
       images: { edges: [{ node: { url: "/Branded caps.jpg", altText: "Branded Cap" } }] },
-      variants: { edges: [{ node: { id: "p1", title: "Standard", price: { amount: "500.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [] } }] },
-      options: [],
+      variants: { 
+        edges: [
+          { node: { id: "cap-black", title: "Black", price: { amount: "500.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Black" }] } },
+          { node: { id: "cap-navy", title: "Navy Blue", price: { amount: "500.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Navy Blue" }] } },
+          { node: { id: "cap-red", title: "Red", price: { amount: "500.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Red" }] } },
+          { node: { id: "cap-white", title: "White", price: { amount: "500.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "White" }] } },
+          { node: { id: "cap-royal", title: "Royal Blue", price: { amount: "500.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Royal Blue" }] } },
+        ] 
+      },
+      options: [{ name: "Color", values: ["Black", "Navy Blue", "Red", "White", "Royal Blue"] }],
     },
   },
   {
@@ -19,9 +27,32 @@ export const localProducts = [
       handle: "premium-polo-t-shirt",
       description: "High quality premium polo t-shirt.",
       priceRange: { minVariantPrice: { amount: "1200.00", currencyCode: "KES" } },
-      images: { edges: [{ node: { url: "/premium polo.jpg", altText: "Premium Polo" } }] },
-      variants: { edges: [{ node: { id: "p2", title: "Standard", price: { amount: "1200.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [] } }] },
-      options: [],
+      images: { 
+        edges: [
+          { node: { url: "/premium polo.jpg", altText: "Premium Polo" } },
+          { node: { url: "/Premium Polo/WhatsApp Image 2026-06-11 at 7.58.25 PM (3).jpeg", altText: "Premium Polo variant" } },
+          { node: { url: "/Premium Polo/WhatsApp Image 2026-06-11 at 7.58.25 PM (4).jpeg", altText: "Premium Polo variant" } },
+          { node: { url: "/Premium Polo/WhatsApp Image 2026-06-11 at 7.58.26 PM (1).jpeg", altText: "Premium Polo variant" } },
+          { node: { url: "/Premium Polo/WhatsApp Image 2026-06-11 at 7.58.26 PM (2).jpeg", altText: "Premium Polo variant" } },
+          { node: { url: "/Premium Polo/WhatsApp Image 2026-06-11 at 7.58.26 PM (3).jpeg", altText: "Premium Polo variant" } },
+          { node: { url: "/Premium Polo/WhatsApp Image 2026-06-11 at 7.58.26 PM.jpeg", altText: "Premium Polo variant" } },
+          { node: { url: "/Premium Polo/WhatsApp Image 2026-06-11 at 7.58.27 PM (1).jpeg", altText: "Premium Polo variant" } },
+          { node: { url: "/Premium Polo/WhatsApp Image 2026-06-11 at 7.58.27 PM (2).jpeg", altText: "Premium Polo variant" } },
+          { node: { url: "/Premium Polo/WhatsApp Image 2026-06-11 at 7.58.27 PM.jpeg", altText: "Premium Polo variant" } },
+          { node: { url: "/Premium Polo/WhatsApp Image 2026-06-11 at 7.59.11 PM (2).jpeg", altText: "Premium Polo variant" } },
+          { node: { url: "/Premium Polo/WhatsApp Image 2026-06-11 at 7.59.11 PM (3).jpeg", altText: "Premium Polo variant" } },
+        ] 
+      },
+      variants: { 
+        edges: [
+          { node: { id: "pp-navy", title: "Navy Blue", price: { amount: "1200.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Navy Blue" }] } },
+          { node: { id: "pp-black", title: "Black", price: { amount: "1200.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Black" }] } },
+          { node: { id: "pp-white", title: "White", price: { amount: "1200.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "White" }] } },
+          { node: { id: "pp-red", title: "Red", price: { amount: "1200.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Red" }] } },
+          { node: { id: "pp-royal", title: "Royal Blue", price: { amount: "1200.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Royal Blue" }] } },
+        ] 
+      },
+      options: [{ name: "Color", values: ["Navy Blue", "Black", "White", "Red", "Royal Blue"] }],
     },
   },
   {
@@ -43,9 +74,19 @@ export const localProducts = [
       handle: "reflector-safety-wear",
       description: "High-visibility safety gear.",
       priceRange: { minVariantPrice: { amount: "1500.00", currencyCode: "KES" } },
-      images: { edges: [{ node: { url: "/safetywear.jpg", altText: "Safety Wear" } }] },
-      variants: { edges: [{ node: { id: "p4", title: "Standard", price: { amount: "1500.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [] } }] },
-      options: [],
+      images: { 
+        edges: [
+          { node: { url: "/safetywear.jpg", altText: "Safety Wear" } },
+          { node: { url: "/Reflectors/WhatsApp Image 2026-06-11 at 7.59.09 PM (2).jpeg", altText: "Safety Wear variant" } },
+        ] 
+      },
+      variants: { 
+        edges: [
+          { node: { id: "sw-orange", title: "Neon Orange", price: { amount: "1500.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Neon Orange" }] } },
+          { node: { id: "sw-green", title: "Neon Green", price: { amount: "1500.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Neon Green" }] } },
+        ] 
+      },
+      options: [{ name: "Color", values: ["Neon Orange", "Neon Green"] }],
     },
   },
   {
@@ -308,13 +349,30 @@ export const localProducts = [
   {
     node: {
       id: "shukas",
-      title: "Shukas",
+      title: "Maasai Shukas",
       handle: "shukas",
       description: "Traditional Maasai Shukas.",
       priceRange: { minVariantPrice: { amount: "1500.00", currencyCode: "KES" } },
-      images: { edges: [{ node: { url: "/Shukas.jpg", altText: "Shukas" } }] },
-      variants: { edges: [{ node: { id: "v20", title: "Standard", price: { amount: "1500.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [] } }] },
-      options: [],
+      images: { 
+        edges: [
+          { node: { url: "/Shukas.jpg", altText: "Maasai Shukas" } },
+          { node: { url: "/Maasai shukas/WhatsApp Image 2026-06-11 at 7.58.25 PM (1).jpeg", altText: "Maasai Shukas variant" } },
+          { node: { url: "/Maasai shukas/WhatsApp Image 2026-06-11 at 7.58.25 PM (2).jpeg", altText: "Maasai Shukas variant" } },
+          { node: { url: "/Shukas/WhatsApp Image 2026-06-11 at 7.59.07 PM (4).jpeg", altText: "Maasai Shukas variant" } },
+          { node: { url: "/Shukas/WhatsApp Image 2026-06-11 at 7.59.08 PM (1).jpeg", altText: "Maasai Shukas variant" } },
+          { node: { url: "/Shukas/WhatsApp Image 2026-06-11 at 7.59.08 PM (2).jpeg", altText: "Maasai Shukas variant" } },
+          { node: { url: "/Shukas/WhatsApp Image 2026-06-11 at 7.59.08 PM (3).jpeg", altText: "Maasai Shukas variant" } },
+          { node: { url: "/Shukas/WhatsApp Image 2026-06-11 at 7.59.08 PM.jpeg", altText: "Maasai Shukas variant" } },
+        ] 
+      },
+      variants: { 
+        edges: [
+          { node: { id: "sh-red", title: "Red", price: { amount: "1500.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Red" }] } },
+          { node: { id: "sh-blue", title: "Blue", price: { amount: "1500.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Blue" }] } },
+          { node: { id: "sh-green", title: "Green", price: { amount: "1500.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Green" }] } },
+        ] 
+      },
+      options: [{ name: "Color", values: ["Red", "Blue", "Green"] }],
     },
   },
   {
@@ -336,9 +394,22 @@ export const localProducts = [
       handle: "sport-tracksuits",
       description: "Comfortable and stylish sport tracksuits.",
       priceRange: { minVariantPrice: { amount: "3500.00", currencyCode: "KES" } },
-      images: { edges: [{ node: { url: "/Sport Track suits.jpg", altText: "Sport Tracksuits" } }] },
-      variants: { edges: [{ node: { id: "v22", title: "Standard", price: { amount: "3500.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [] } }] },
-      options: [],
+      images: { 
+        edges: [
+          { node: { url: "/Sport Track suits.jpg", altText: "Sport Tracksuits" } },
+          { node: { url: "/Track suits/WhatsApp Image 2026-06-11 at 7.58.27 PM (3).jpeg", altText: "Sport Tracksuits variant" } },
+          { node: { url: "/Track suits/WhatsApp Image 2026-06-11 at 7.58.27 PM (4).jpeg", altText: "Sport Tracksuits variant" } },
+          { node: { url: "/Track suits/WhatsApp Image 2026-06-11 at 7.58.28 PM.jpeg", altText: "Sport Tracksuits variant" } },
+        ] 
+      },
+      variants: { 
+        edges: [
+          { node: { id: "ts-black", title: "Black", price: { amount: "3500.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Black" }] } },
+          { node: { id: "ts-navy", title: "Navy Blue", price: { amount: "3500.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Navy Blue" }] } },
+          { node: { id: "ts-grey", title: "Grey", price: { amount: "3500.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Grey" }] } },
+        ] 
+      },
+      options: [{ name: "Color", values: ["Black", "Navy Blue", "Grey"] }],
     },
   },
   {

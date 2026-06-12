@@ -28,13 +28,13 @@ export default function ContactPage() {
       <section className="mx-auto grid max-w-7xl gap-12 px-6 pb-24 md:grid-cols-12">
         <div className="md:col-span-5 space-y-8">
           {[
-            { Icon: Mail, label: "Email", value: "Joysmartventure@gmail.com" },
-            { Icon: Phone, label: "Phone", value: "+254 712 112 778 / +254 734 236 242" },
-            { Icon: MapPin, label: "Studio", value: "Nairobi, Kenya" },
-          ].map(({ Icon, label, value }) => (
+            { imgSrc: "/icons8-gmail-100.png", label: "Email", value: "Joysmartventure@gmail.com" },
+            { imgSrc: "/Whatsapp.png", label: "Phone", value: "+254 712 112 778 / +254 734 236 242" },
+            { imgSrc: "/icons8-location-100.png", label: "Studio", value: "Nairobi, Kenya" },
+          ].map(({ imgSrc, label, value }) => (
             <div key={label} className="flex items-start gap-4">
-              <div className="grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
-                <Icon className="h-5 w-5" />
+              <div className="grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary overflow-hidden">
+                <img src={imgSrc} alt={label} className="h-7 w-7 object-contain" />
               </div>
               <div>
                 <div className="text-xs uppercase tracking-widest text-muted-foreground">{label}</div>
@@ -44,8 +44,8 @@ export default function ContactPage() {
           ))}
 
           <div className="flex items-start gap-4">
-            <div className="grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            <div className="grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary overflow-hidden">
+              <img src="/icons8-facebook-50.png" alt="Facebook" className="h-7 w-7 object-contain" />
             </div>
             <div>
               <div className="text-xs uppercase tracking-widest text-muted-foreground">Facebook</div>
@@ -54,8 +54,8 @@ export default function ContactPage() {
           </div>
 
           <div className="flex items-start gap-4">
-            <div className="grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tiktok"><path d="M9 12v10h4V12c0-1.7 1.3-3 3-3V5a3 3 0 0 0-3-3H9a3 3 0 0 0-3 3v4c0 1.7 1.3 3 3 3z"/><path d="M12 12c0-1.7 1.3-3 3-3V5a3 3 0 0 0-3-3H9a3 3 0 0 0-3 3v4c0 1.7 1.3 3 3 3z"/></svg>
+            <div className="grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary overflow-hidden">
+              <img src="/tiktok.png" alt="TikTok" className="h-7 w-7 object-contain" />
             </div>
             <div>
               <div className="text-xs uppercase tracking-widest text-muted-foreground">TikTok</div>
@@ -64,12 +64,22 @@ export default function ContactPage() {
           </div>
 
           <div className="flex items-start gap-4">
-            <div className="grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.5" y1="6.5" y2="6.5"/></svg>
+            <div className="grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary overflow-hidden">
+              <img src="/icons8-instagram-50.png" alt="Instagram" className="h-7 w-7 object-contain" />
             </div>
             <div>
               <div className="text-xs uppercase tracking-widest text-muted-foreground">Instagram</div>
               <Link to="https://instagram.com/Joysmartbranding" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold hover:text-primary">@Joysmartbranding</Link>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-4">
+            <div className="grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary overflow-hidden">
+              <img src="/youtube.png" alt="YouTube" className="h-7 w-7 object-contain" />
+            </div>
+            <div>
+              <div className="text-xs uppercase tracking-widest text-muted-foreground">YouTube</div>
+              <Link to="https://youtube.com/@joysmartbranding" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold hover:text-primary">Joysmart Branding</Link>
             </div>
           </div>
 

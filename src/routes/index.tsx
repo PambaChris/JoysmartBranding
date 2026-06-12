@@ -105,6 +105,25 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-6 py-24">
           <div className="grid gap-12 md:grid-cols-2">
             <div>
+              <div className="flex gap-4 mb-8">
+                {[
+                  { href: "https://facebook.com/Joysmart-Branding-Services", src: "/icons8-facebook-50.png", alt: "Facebook" },
+                  { href: "https://instagram.com/Joysmartbranding", src: "/icons8-instagram-50.png", alt: "Instagram" },
+                  { href: "https://wa.me/254712112778", src: "/Whatsapp.png", alt: "WhatsApp" },
+                  { href: "https://tiktok.com/@joysmartbranding", src: "/tiktok.png", alt: "TikTok" },
+                  { href: "https://youtube.com/@joysmartbranding", src: "/youtube.png", alt: "YouTube" },
+                ].map((social) => (
+                  <Link
+                    key={social.alt}
+                    to={social.href || "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="grid h-10 w-10 place-items-center rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                  >
+                    <img src={social.src} alt={social.alt} className="h-6 w-6 object-contain" />
+                  </Link>
+                ))}
+              </div>
               <div className="text-xs font-semibold uppercase tracking-widest text-primary">Why Joysmart</div>
               <h2 className="mt-3 text-display text-5xl md:text-6xl">A reliable<br />branding partner.</h2>
               <p className="mt-6 max-w-md text-cream/70">
