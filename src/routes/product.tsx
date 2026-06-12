@@ -79,9 +79,9 @@ function ProductDetail({ product }: { product: any }) {
   };
 
   return (
-    <section className="mx-auto grid max-w-7xl gap-8 px-6 pt-8 pb-24 md:grid-cols-2 md:pt-20">
-      <div className="space-y-6">
-        <div className="aspect-[4/3] overflow-hidden rounded-3xl bg-secondary/10 md:aspect-square">
+    <section className="mx-auto grid max-w-7xl gap-6 px-6 pt-6 pb-24 md:grid-cols-2 md:pt-20 md:gap-12">
+      <div className="space-y-4 md:space-y-6">
+        <div className="aspect-video overflow-hidden rounded-3xl bg-secondary/10 md:aspect-square">
           <img 
             src={images[activeImageIndex]?.url || images[0]?.url} 
             alt={images[activeImageIndex]?.altText || product.node.title} 
@@ -89,12 +89,12 @@ function ProductDetail({ product }: { product: any }) {
           />
         </div>
         {images.length > 1 && (
-          <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
+          <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide md:gap-4">
             {images.map((img: any, idx: number) => (
               <button
                 key={idx}
                 onClick={() => setActiveImageIndex(idx)}
-                className={`relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-xl border-2 transition-all ${
+                className={`relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-xl border-2 transition-all md:h-20 md:w-20 ${
                   activeImageIndex === idx ? "border-ink" : "border-transparent opacity-60 hover:opacity-100"
                 }`}
               >
@@ -108,17 +108,17 @@ function ProductDetail({ product }: { product: any }) {
         <Link to="/store" className="text-sm text-muted-foreground hover:text-foreground">
           ← Back to store
         </Link>
-        <h1 className="mt-4 text-display text-4xl md:text-6xl">{product.node.title}</h1>
-        <div className="mt-4 text-3xl font-semibold text-primary">
+        <h1 className="mt-4 text-display text-3xl md:text-6xl">{product.node.title}</h1>
+        <div className="mt-3 text-2xl font-semibold text-primary md:text-3xl">
           {variant.price.currencyCode} {parseFloat(variant.price.amount).toFixed(2)}
         </div>
         
         {options.length > 0 && (
-          <div className="mt-8 space-y-6">
+          <div className="mt-6 space-y-4 md:mt-8 md:space-y-6">
             {options.map((option: any) => (
               <div key={option.name}>
                 <h3 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">{option.name}</h3>
-                <div className="mt-3 flex flex-wrap gap-2">
+                <div className="mt-2 flex flex-wrap gap-2 md:mt-3">
                   {option.values.map((value: string) => {
                     const isSelected = currentOptions[option.name] === value;
                     return (
@@ -142,10 +142,10 @@ function ProductDetail({ product }: { product: any }) {
         )}
 
         {product.node.description && (
-          <p className="mt-6 whitespace-pre-line text-muted-foreground">{product.node.description}</p>
+          <p className="mt-4 whitespace-pre-line text-sm text-muted-foreground md:mt-6 md:text-base">{product.node.description}</p>
         )}
 
-        <Button onClick={handleAdd} size="lg" disabled={isLoading || !variant?.availableForSale} className="mt-8 w-full md:w-auto">
+        <Button onClick={handleAdd} size="lg" disabled={isLoading || !variant?.availableForSale} className="mt-6 w-full md:mt-8 md:w-auto">
           {!variant?.availableForSale ? "Sold out" : isLoading ? "Loading..." : "Add to cart"}
         </Button>
       </div>
