@@ -292,4 +292,77 @@ export const localProducts = [
       options: [],
     },
   },
+  // --- Latest Store Additions ---
+  {
+    node: {
+      id: "dry-fit-round-neck",
+      title: "Dry fit round neck t-shirt",
+      handle: "dry-fit-round-neck-t-shirt",
+      description: "High-performance dry fit round neck t-shirts.",
+      priceRange: { minVariantPrice: { amount: "1000.00", currencyCode: "KES" } },
+      images: { edges: [{ node: { url: "/Dry fit round neck.jpg", altText: "Dry fit round neck t-shirt" } }] },
+      variants: { edges: [{ node: { id: "v19", title: "Standard", price: { amount: "1000.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [] } }] },
+      options: [],
+    },
+  },
+  {
+    node: {
+      id: "shukas",
+      title: "Shukas",
+      handle: "shukas",
+      description: "Traditional Maasai Shukas.",
+      priceRange: { minVariantPrice: { amount: "1500.00", currencyCode: "KES" } },
+      images: { edges: [{ node: { url: "/Shukas.jpg", altText: "Shukas" } }] },
+      variants: { edges: [{ node: { id: "v20", title: "Standard", price: { amount: "1500.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [] } }] },
+      options: [],
+    },
+  },
+  {
+    node: {
+      id: "hoodies-new",
+      title: "Hoodies",
+      handle: "hoodies",
+      description: "Premium quality hoodies.",
+      priceRange: { minVariantPrice: { amount: "2800.00", currencyCode: "KES" } },
+      images: { edges: [{ node: { url: "/Hoodies.jpg", altText: "Hoodies" } }] },
+      variants: { edges: [{ node: { id: "v21", title: "Standard", price: { amount: "2800.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [] } }] },
+      options: [],
+    },
+  },
+  {
+    node: {
+      id: "sport-tracksuits",
+      title: "Sport Tracksuits",
+      handle: "sport-tracksuits",
+      description: "Comfortable and stylish sport tracksuits.",
+      priceRange: { minVariantPrice: { amount: "3500.00", currencyCode: "KES" } },
+      images: { edges: [{ node: { url: "/Sport Track suits.jpg", altText: "Sport Tracksuits" } }] },
+      variants: { edges: [{ node: { id: "v22", title: "Standard", price: { amount: "3500.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [] } }] },
+      options: [],
+    },
+  },
+  {
+    node: {
+      id: "lessos",
+      title: "Lessos",
+      handle: "lessos",
+      description: "Traditional Lessos with vibrant prints.",
+      priceRange: { minVariantPrice: { amount: "1200.00", currencyCode: "KES" } },
+      images: { edges: [{ node: { url: "/Lessos.jpg", altText: "Lessos" } }] },
+      variants: { edges: [{ node: { id: "v23", title: "Standard", price: { amount: "1200.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [] } }] },
+      options: [],
+    },
+  },
+  {
+    node: {
+      id: "safari-hat",
+      title: "Safari Hat",
+      handle: "safari-hat",
+      description: "Durable and stylish Safari Hats.",
+      priceRange: { minVariantPrice: { amount: "1200.00", currencyCode: "KES" } },
+      images: { edges: [{ node: { url: "/Safari Hats.jpg", altText: "Safari Hat" } }] },
+      variants: { edges: [{ node: { id: "v24", title: "Standard", price: { amount: "1200.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [] } }] },
+      options: [],
+    },
+  },
 ];
