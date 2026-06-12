@@ -9,7 +9,7 @@ import { useCartStore } from "@/stores/cartStore";
 export default function StorePage() {
   useSeo({
     title: "Store — Joysmart Branding Services",
-    description: "Shop branded promotional merchandise online — polos, caps, mugs, glasses and more.",
+    description: "Shop branded promotional merchandise online — polos, premium caps, mugs, glasses and more.",
     canonical: "/store",
     meta: [
       { property: "og:title", content: "Store — Joysmart Branding Services" },

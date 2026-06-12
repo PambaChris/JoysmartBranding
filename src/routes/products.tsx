@@ -6,10 +6,11 @@ import hero from "@/assets/hero-merch.jpg";
 const products = [
   "Premium Polo T-Shirts",
   "Round Neck T-Shirts",
-  "Caps",
+  "Premium Caps",
   "Reflectors & Safety Wear",
   "Hoodies",
-  "Half Jackets",
+  "Jerseys",
+  "Puff Jackets",
   "Leso & Branded Fabrics",
   "Branded Mugs",
   "Branded Glasses",
@@ -21,7 +22,7 @@ const products = [
 export default function ProductsPage() {
   useSeo({
     title: "Products — Joysmart Branding Services",
-    description: "Premium polo t-shirts, caps, hoodies, reflectors, mugs, glasses, leso and more — all brand-ready.",
+    description: "Premium polo t-shirts, premium caps, hoodies, reflectors, mugs, glasses, leso and more — all brand-ready.",
     canonical: "/products",
     meta: [
       { property: "og:title", content: "Products — Joysmart Branding Services" },
