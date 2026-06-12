@@ -83,6 +83,27 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-7xl px-6 py-12 border-t border-border">
+        <div className="flex flex-col items-center text-center">
+          <div className="text-xs font-semibold uppercase tracking-widest text-primary">Our track record</div>
+          <h2 className="mt-3 text-display text-4xl md:text-5xl">Satisfied Customers</h2>
+        </div>
+      </section>
+
+      <div className="border-y border-border bg-ink py-10 text-cream overflow-hidden">
+        <div className="flex w-max gap-16 marquee whitespace-nowrap items-center">
+          {[...clientLogos, ...clientLogos].map((logo, i) => (
+            <div key={i} className="flex h-12 w-40 items-center justify-center">
+              <img 
+                src={logo.src} 
+                alt={logo.name}
+                className="h-full w-full object-contain"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
       <section className="mx-auto max-w-7xl px-6 py-24 border-t border-border bg-card/30 rounded-[3rem] my-12">
         <div className="flex flex-col items-center text-center">
           <div className="text-xs font-semibold uppercase tracking-widest text-primary">The people behind the magic</div>
@@ -117,20 +138,6 @@ export default function AboutPage() {
           ))}
         </div>
       </section>
-
-      <div className="border-y border-border bg-ink py-10 text-cream overflow-hidden">
-        <div className="flex w-max gap-16 marquee whitespace-nowrap items-center">
-          {[...clientLogos, ...clientLogos].map((logo, i) => (
-            <div key={i} className="flex h-12 w-40 items-center justify-center">
-              <img 
-                src={logo.src} 
-                alt={logo.name}
-                className="h-full w-full object-contain"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
 
       <section className="bg-ink text-cream">
         <div className="mx-auto max-w-7xl px-6 py-24">
