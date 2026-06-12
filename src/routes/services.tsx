@@ -10,17 +10,32 @@ const services = [
   {
     icon: Sparkles, n: "01", title: "Promotional Merchandise Branding", img: printing,
     desc: "Custom-branded merchandise designed to market your brand effectively and professionally — printed, embroidered or engraved with precision.",
-    items: ["Screen printing", "Embroidery", "Heat transfer", "Engraving"],
+    items: [
+      { title: "Screen printing", desc: "Durable, vibrant prints ideal for large apparel orders." },
+      { title: "Embroidery", desc: "Premium needlework for a professional, long-lasting finish." },
+      { title: "Heat transfer", desc: "Perfect for complex, multi-color designs on any fabric." },
+      { title: "Engraving", desc: "Precise, permanent marking for metal, wood, and glass." },
+    ],
   },
   {
     icon: Palette, n: "02", title: "Graphic Design", img: design,
     desc: "Creative and modern designs for logos, marketing materials, company profiles, posters, banners and digital branding.",
-    items: ["Logo design", "Company profiles", "Posters & banners", "Digital branding"],
+    items: [
+      { title: "Logo design", desc: "Unique brand identities that stand out." },
+      { title: "Company profiles", desc: "Professional layouts for your business story." },
+      { title: "Posters & banners", desc: "Attention-grabbing marketing materials." },
+      { title: "Digital branding", desc: "Cohesive visuals across all digital platforms." },
+    ],
   },
   {
     icon: Award, n: "03", title: "Outdoor Branding", img: outdoor,
     desc: "Professional outdoor advertising and branding solutions that increase brand visibility and attract attention.",
-    items: ["Billboards", "Signage", "Vehicle branding", "Banners & flags"],
+    items: [
+      { title: "Billboards", desc: "High-impact advertising for major visibility." },
+      { title: "Signage", desc: "Custom shop and office signs that direct and brand." },
+      { title: "Vehicle branding", desc: "Turn your fleet into moving billboards." },
+      { title: "Banners & flags", desc: "Durable solutions for events and promotions." },
+    ],
   },
 ];
 
@@ -57,13 +72,14 @@ export default function ServicesPage() {
               </div>
               <h2 className="mt-4 text-display text-4xl md:text-5xl">{s.title}</h2>
               <p className="mt-4 text-lg text-muted-foreground">{s.desc}</p>
-              <ul className="mt-6 grid grid-cols-2 gap-2">
+              <div className="mt-8 grid gap-6 sm:grid-cols-2">
                 {s.items.map((it) => (
-                  <li key={it} className="rounded-full border border-border bg-card px-4 py-2 text-sm">
-                    {it}
-                  </li>
+                  <div key={it.title} className="flex flex-col gap-1">
+                    <h3 className="font-bold text-foreground">{it.title}</h3>
+                    <p className="text-sm text-muted-foreground">{it.desc}</p>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           </article>
         ))}
