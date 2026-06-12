@@ -44,7 +44,7 @@ export default function ProductsPage() {
           </p>
         </div>
         <div className="md:col-span-5">
-          <img src={hero} alt="Range of branded merchandise" loading="lazy" width={1600} height={1200} className="aspect-square w-full rounded-3xl object-cover shadow-brand" />
+          <img src={hero} alt="Range of branded merchandise" loading="lazy" width={1600} height={1200} className="aspect-video w-full rounded-3xl object-cover shadow-brand md:aspect-square" />
         </div>
       </section>
 

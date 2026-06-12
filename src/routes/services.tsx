@@ -61,9 +61,9 @@ export default function ServicesPage() {
 
       <section className="mx-auto max-w-7xl space-y-24 px-6 pb-24">
         {services.map((s, i) => (
-          <article key={s.n} className="grid gap-10 md:grid-cols-12 md:gap-16">
+          <article key={s.n} className="grid gap-8 md:grid-cols-12 md:gap-16">
             <div className={`md:col-span-6 ${i % 2 ? "md:order-2" : ""}`}>
-              <img src={s.img} alt={s.title} loading="lazy" width={1200} height={900} className="aspect-[5/4] w-full rounded-3xl object-cover shadow-brand" />
+              <img src={s.img} alt={s.title} loading="lazy" width={1200} height={900} className="aspect-video w-full rounded-3xl object-cover shadow-brand md:aspect-[5/4]" />
             </div>
             <div className="md:col-span-6 flex flex-col justify-center">
               <div className="flex items-center gap-3 text-display text-primary">

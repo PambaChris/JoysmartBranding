@@ -58,7 +58,7 @@ export default function HomePage() {
           </div>
           <div className="md:col-span-5 relative">
             <div className="absolute -top-6 -left-6 hidden h-24 w-24 rotate-12 rounded-2xl bg-primary md:block" />
-            <img src={hero} alt="Branded promotional merchandise flat lay" width={1600} height={1200} className="relative aspect-[4/5] w-full rounded-3xl object-cover shadow-brand" />
+            <img src={hero} alt="Branded promotional merchandise flat lay" width={1600} height={1200} className="relative aspect-square w-full rounded-3xl object-cover shadow-brand md:aspect-[4/5]" />
             <div className="absolute -bottom-6 -right-6 hidden rounded-2xl bg-ink px-5 py-4 text-cream shadow-brand md:block">
               <div className="text-display text-3xl text-primary">500+</div>
               <div className="text-xs text-cream/70">brands trusted us</div>
@@ -88,12 +88,12 @@ export default function HomePage() {
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {services.map((s) => (
             <article key={s.title} className="group overflow-hidden rounded-3xl bg-card transition-shadow hover:shadow-brand">
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="aspect-video overflow-hidden md:aspect-[4/3]">
                 <img src={s.img} alt={s.title} loading="lazy" width={1200} height={900} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
               </div>
-              <div className="p-7">
+              <div className="p-6 md:p-7">
                 <s.icon className="h-6 w-6 text-primary" />
-                <h3 className="mt-4 text-2xl">{s.title}</h3>
+                <h3 className="mt-4 text-xl md:text-2xl">{s.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
               </div>
             </article>

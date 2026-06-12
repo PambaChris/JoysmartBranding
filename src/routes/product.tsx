@@ -79,9 +79,9 @@ function ProductDetail({ product }: { product: any }) {
   };
 
   return (
-    <section className="mx-auto grid max-w-7xl gap-12 px-6 pt-12 pb-24 md:grid-cols-2 md:pt-20">
+    <section className="mx-auto grid max-w-7xl gap-8 px-6 pt-8 pb-24 md:grid-cols-2 md:pt-20">
       <div className="space-y-6">
-        <div className="aspect-square overflow-hidden rounded-3xl bg-secondary/10">
+        <div className="aspect-[4/3] overflow-hidden rounded-3xl bg-secondary/10 md:aspect-square">
           <img 
             src={images[activeImageIndex]?.url || images[0]?.url} 
             alt={images[activeImageIndex]?.altText || product.node.title} 

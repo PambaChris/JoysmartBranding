@@ -29,7 +29,7 @@ export default function StorePage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 pb-24">
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3">
           {localProducts.map((p) => (
             <ProductCard key={p.node.id} product={p} />
           ))}
@@ -79,12 +79,12 @@ function ProductCard({ product }: { product: any }) {
           </div>
         )}
       </div>
-      <div className="flex flex-1 flex-col gap-3 p-6">
-        <h3 className="text-display text-xl leading-tight">{product.node.title}</h3>
-        <div className="text-lg font-semibold text-primary">
+      <div className="flex flex-1 flex-col gap-2 p-4 md:p-6">
+        <h3 className="text-display text-lg md:text-xl leading-tight">{product.node.title}</h3>
+        <div className="text-base md:text-lg font-semibold text-primary">
           {price.currencyCode} {parseFloat(price.amount).toFixed(2)}
         </div>
-        <Button onClick={handleAdd} disabled={isLoading || !variant?.availableForSale} className="mt-auto">
+        <Button onClick={handleAdd} size="sm" disabled={isLoading || !variant?.availableForSale} className="mt-auto md:h-10 md:px-4 md:py-2">
           {!variant?.availableForSale ? "Sold out" : isLoading ? "Loading..." : "Add to cart"}
         </Button>
       </div>

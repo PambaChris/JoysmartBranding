@@ -61,8 +61,8 @@ export default function AboutPage() {
       </section>
 
       <section className="mx-auto grid max-w-7xl gap-12 px-6 pb-24 md:grid-cols-2">
-        <div className="flex items-center justify-center rounded-3xl bg-muted p-12">
-          <img src="/joysmart-logo.svg" alt="Joysmart Logo" className="w-full max-w-[300px] object-contain" />
+        <div className="flex items-center justify-center rounded-3xl bg-muted p-8 md:p-12">
+          <img src="/joysmart-logo.svg" alt="Joysmart Logo" className="w-full max-w-[200px] md:max-w-[300px] object-contain" />
         </div>
         <div className="flex flex-col justify-center gap-6 text-lg text-muted-foreground">
           <p>
@@ -117,7 +117,7 @@ export default function AboutPage() {
           {team.map((member) => (
             <div key={member.name} className="group flex flex-col items-center text-center">
               {member.name === "Namalwa Chesoli" ? (
-                <div className="relative mb-6 aspect-[3/4] w-full overflow-hidden rounded-2xl bg-muted shadow-sm transition-all duration-300 group-hover:shadow-brand group-hover:-translate-y-1">
+                <div className="relative mb-6 aspect-[3/4] w-full max-w-[240px] overflow-hidden rounded-2xl bg-muted shadow-sm transition-all duration-300 group-hover:shadow-brand group-hover:-translate-y-1">
                   <img 
                     src={member.image} 
                     alt={member.name} 
