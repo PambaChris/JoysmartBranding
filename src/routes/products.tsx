@@ -5,6 +5,7 @@ import hero from "@/assets/hero-merch.jpg";
 
 const products = [
   "Normal cap",
+  "Premium Polo",
   "Polycotton polo T-shirt",
   "Polycotton round neck Tshirt",
   "Reflector safety wear",

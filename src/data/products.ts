@@ -1,4 +1,4 @@
-export const localProducts = [
+const rawProducts = [
   {
     node: {
       id: "normal-cap",
@@ -38,6 +38,26 @@ export const localProducts = [
         ]
       },
       options: [{ name: "Color", values: ["Navy Blue", "Black", "White", "Red", "Royal Blue", "Orange", "Green"] }],
+    },
+  },
+  {
+    node: {
+      id: "premium-polo",
+      title: "Premium Polo",
+      handle: "premium-polo",
+      description: "High-quality premium polo t-shirts, available in various colors.",
+      priceRange: { minVariantPrice: { amount: "600.00", currencyCode: "KES" } },
+      images: { edges: [{ node: { url: "/Polo new.png", altText: "Premium Polo" } }] },
+      variants: {
+        edges: [
+          { node: { id: "prep-navy", title: "Navy Blue", price: { amount: "600.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Navy Blue" }] } },
+          { node: { id: "prep-black", title: "Black", price: { amount: "600.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Black" }] } },
+          { node: { id: "prep-white", title: "White", price: { amount: "600.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "White" }] } },
+          { node: { id: "prep-red", title: "Red", price: { amount: "600.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Red" }] } },
+          { node: { id: "prep-grey", title: "Grey", price: { amount: "600.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Grey" }] } },
+        ]
+      },
+      options: [{ name: "Color", values: ["Navy Blue", "Black", "White", "Red", "Grey"] }],
     },
   },
   {
@@ -501,3 +521,69 @@ export const localProducts = [
     },
   },
 ];
+
+function getBrandedPrice(basePrice: number): number {
+  if (basePrice >= 20000) return basePrice + 3000;
+  if (basePrice >= 10000) return basePrice + 1500;
+  if (basePrice >= 3000) return basePrice + 500;
+  if (basePrice >= 1000) return basePrice + 300;
+  if (basePrice >= 500) return basePrice + 200;
+  if (basePrice >= 200) return basePrice + 100;
+  return basePrice + 50;
+}
+
+export const localProducts = rawProducts.map((product) => {
+  const node = product.node;
+  // If the product already has the Branding option, don't modify it
+  if (node.options.some((opt: any) => opt.name === "Branding")) {
+    return product;
+  }
+
+  // Create new options
+  const newOptions = [...node.options, { name: "Branding", values: ["Unbranded", "Branded"] }];
+
+  // Create new variants
+  const newEdges = node.variants.edges.flatMap((edge: any) => {
+    const originalNode = edge.node;
+    const basePrice = parseFloat(originalNode.price.amount);
+    const brandedPrice = getBrandedPrice(basePrice);
+
+    return [
+      {
+        node: {
+          ...originalNode,
+          id: `${originalNode.id}-unbranded`,
+          title: originalNode.title !== "Standard" ? `${originalNode.title} / Unbranded` : "Unbranded",
+          price: {
+            ...originalNode.price,
+            amount: basePrice.toFixed(2),
+          },
+          selectedOptions: [...(originalNode.selectedOptions || []), { name: "Branding", value: "Unbranded" }],
+        },
+      },
+      {
+        node: {
+          ...originalNode,
+          id: `${originalNode.id}-branded`,
+          title: originalNode.title !== "Standard" ? `${originalNode.title} / Branded` : "Branded",
+          price: {
+            ...originalNode.price,
+            amount: brandedPrice.toFixed(2),
+          },
+          selectedOptions: [...(originalNode.selectedOptions || []), { name: "Branding", value: "Branded" }],
+        },
+      },
+    ];
+  });
+
+  return {
+    ...product,
+    node: {
+      ...node,
+      options: newOptions,
+      variants: {
+        edges: newEdges,
+      },
+    },
+  };
+});
