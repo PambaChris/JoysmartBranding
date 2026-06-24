@@ -378,7 +378,18 @@ export const localProducts = [
       handle: "hoodies",
       description: "Warm and cozy branded hoodies.",
       priceRange: { minVariantPrice: { amount: "2000.00", currencyCode: "KES" } },
-      images: { edges: [{ node: { url: "/Hoodies.jpg", altText: "Hoodies" } }] },
+      images: { 
+        edges: [
+          { node: { url: "/Hoodies.jpg", altText: "Hoodies" } },
+          { node: { url: "/Hoodies/WhatsApp Image 2026-06-11 at 7.58.19 PM.jpeg", altText: "Hoodie variant" } },
+          { node: { url: "/Hoodies/WhatsApp Image 2026-06-11 at 7.58.19 PM (1).jpeg", altText: "Hoodie variant" } },
+          { node: { url: "/Hoodies/WhatsApp Image 2026-06-11 at 7.58.19 PM (2).jpeg", altText: "Hoodie variant" } },
+          { node: { url: "/Hoodies/WhatsApp Image 2026-06-11 at 7.58.19 PM (3).jpeg", altText: "Hoodie variant" } },
+          { node: { url: "/Hoodies/WhatsApp Image 2026-06-11 at 7.58.20 PM.jpeg", altText: "Hoodie variant" } },
+          { node: { url: "/Hoodies/WhatsApp Image 2026-06-11 at 7.58.20 PM (1).jpeg", altText: "Hoodie variant" } },
+          { node: { url: "/Hoodies/WhatsApp Image 2026-06-11 at 7.58.20 PM (2).jpeg", altText: "Hoodie variant" } },
+        ] 
+      },
       variants: {
         edges: [
           { node: { id: "h-blue", title: "Blue", price: { amount: "2000.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Blue" }] } },
