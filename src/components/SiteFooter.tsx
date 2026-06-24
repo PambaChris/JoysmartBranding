@@ -26,14 +26,14 @@ export function SiteFooter() {
             <div className="text-xs font-semibold uppercase tracking-widest text-primary">Contact</div>
             <ul className="mt-4 space-y-2 text-sm text-cream/80">
               <li>Joysmartventure@gmail.com</li>
-              <li>+254 712 112 778</li>
+              <li>+254 119 128 907</li>
               <li>+254 734 236 242</li>
               <li>Nairobi, Kenya</li>
             </ul>
             <div className="mt-6 flex gap-4">
               <a href="https://facebook.com/Joysmart-Branding-Services" target="_blank" rel="noopener noreferrer"><img src="/icons8-facebook-50.png" alt="Facebook" className="h-6 w-6 brightness-0 invert" /></a>
               <a href="https://instagram.com/Joysmartbranding" target="_blank" rel="noopener noreferrer"><img src="/icons8-instagram-50.png" alt="Instagram" className="h-6 w-6 brightness-0 invert" /></a>
-              <a href="https://wa.me/254712112778" target="_blank" rel="noopener noreferrer"><img src="/Whatsapp.png" alt="WhatsApp" className="h-6 w-6 brightness-0 invert" /></a>
+              <a href="https://wa.me/254119128907" target="_blank" rel="noopener noreferrer"><img src="/Whatsapp.png" alt="WhatsApp" className="h-6 w-6 brightness-0 invert" /></a>
               <a href="https://tiktok.com/@joysmartbranding" target="_blank" rel="noopener noreferrer"><img src="/tiktok.png" alt="TikTok" className="h-6 w-6 brightness-0 invert" /></a>
               <a href="https://youtube.com/@joysmartbranding" target="_blank" rel="noopener noreferrer"><img src="/youtube.png" alt="YouTube" className="h-6 w-6 brightness-0 invert" /></a>
             </div>

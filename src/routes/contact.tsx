@@ -29,7 +29,7 @@ export default function ContactPage() {
         <div className="md:col-span-5 space-y-8">
           {[
             { imgSrc: "/icons8-gmail-100.png", label: "Email", value: "Joysmartventure@gmail.com" },
-            { imgSrc: "/Whatsapp.png", label: "Phone", value: "+254 712 112 778 / +254 734 236 242" },
+            { imgSrc: "/Whatsapp.png", label: "Phone", value: "+254 119 128 907 / +254 734 236 242" },
             { imgSrc: "/icons8-location-100.png", label: "Studio", value: "Nairobi, Kenya" },
           ].map(({ imgSrc, label, value }) => (
             <div key={label} className="flex items-start gap-4">

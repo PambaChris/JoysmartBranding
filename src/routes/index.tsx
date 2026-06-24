@@ -109,7 +109,7 @@ export default function HomePage() {
                 {[
                   { href: "https://facebook.com/Joysmart-Branding-Services", src: "/icons8-facebook-50.png", alt: "Facebook" },
                   { href: "https://instagram.com/Joysmartbranding", src: "/icons8-instagram-50.png", alt: "Instagram" },
-                  { href: "https://wa.me/254712112778", src: "/Whatsapp.png", alt: "WhatsApp" },
+                  { href: "https://wa.me/254119128907", src: "/Whatsapp.png", alt: "WhatsApp" },
                   { href: "https://tiktok.com/@joysmartbranding", src: "/tiktok.png", alt: "TikTok" },
                   { href: "https://youtube.com/@joysmartbranding", src: "/youtube.png", alt: "YouTube" },
                 ].map((social) => (

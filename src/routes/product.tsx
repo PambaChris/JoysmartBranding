@@ -81,11 +81,11 @@ function ProductDetail({ product }: { product: any }) {
   return (
     <section className="mx-auto grid max-w-7xl gap-6 px-6 pt-6 pb-24 md:grid-cols-2 md:pt-20 md:gap-12">
       <div className="space-y-4 md:space-y-6">
-        <div className="mx-auto aspect-video w-auto max-w-full overflow-hidden rounded-3xl bg-secondary/10 max-h-[65vh] md:aspect-square md:max-h-none md:w-full">
+        <div className="aspect-video overflow-hidden rounded-3xl bg-secondary/10 md:aspect-square">
           <img 
             src={images[activeImageIndex]?.url || images[0]?.url} 
             alt={images[activeImageIndex]?.altText || product.node.title} 
-            className="h-full w-full object-contain transition-opacity duration-300" 
+            className="h-full w-full object-cover transition-opacity duration-300" 
           />
         </div>
         {images.length > 1 && (

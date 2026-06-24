@@ -19,7 +19,7 @@ export function CartDrawer() {
   const totalPrice = items.reduce((sum, i) => sum + parseFloat(i.price.amount) * i.quantity, 0);
 
   const handleCheckout = () => {
-    const phoneNumber = "254712112778";
+    const phoneNumber = "254119128907";
     const message = items
       .map((item) => {
         let text = `*${item.product.node.title}*\nQty: ${item.quantity}\nPrice: ${item.price.currencyCode} ${parseFloat(
