@@ -103,14 +103,14 @@ export const localProducts = [
       title: "Puff Jackets",
       handle: "puff-jackets",
       description: "Warm, padded puff jackets.",
-      priceRange: { minVariantPrice: { amount: "300.00", currencyCode: "KES" } },
+      priceRange: { minVariantPrice: { amount: "3000.00", currencyCode: "KES" } },
       images: { edges: [{ node: { url: "/brandedhalfjacket.jpg", altText: "Puff Jackets" } }] },
       variants: {
         edges: [
-          { node: { id: "pj-pink", title: "Pink", price: { amount: "300.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Pink" }] } },
-          { node: { id: "pj-blue", title: "Blue", price: { amount: "300.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Blue" }] } },
-          { node: { id: "pj-yellow", title: "Yellow", price: { amount: "300.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Yellow" }] } },
-          { node: { id: "pj-white", title: "White", price: { amount: "300.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "White" }] } },
+          { node: { id: "pj-pink", title: "Pink", price: { amount: "3000.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Pink" }] } },
+          { node: { id: "pj-blue", title: "Blue", price: { amount: "3000.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Blue" }] } },
+          { node: { id: "pj-yellow", title: "Yellow", price: { amount: "3000.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Yellow" }] } },
+          { node: { id: "pj-white", title: "White", price: { amount: "3000.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "White" }] } },
         ]
       },
       options: [{ name: "Color", values: ["Pink", "Blue", "Yellow", "White"] }],
@@ -471,7 +471,7 @@ export const localProducts = [
       title: "Maasai Shukas",
       handle: "maasai-shukas",
       description: "Traditional Maasai Shukas, available branded or unbranded.",
-      priceRange: { minVariantPrice: { amount: "1500.00", currencyCode: "KES" } },
+      priceRange: { minVariantPrice: { amount: "850.00", currencyCode: "KES" } },
       images: { 
         edges: [
           { node: { url: "/Maasai shukas/WhatsApp Image 2026-06-11 at 7.58.25 PM (1).jpeg", altText: "Maasai Shukas" } },
@@ -482,16 +482,16 @@ export const localProducts = [
       },
       variants: {
         edges: [
-          { node: { id: "ms-red-unbranded", title: "Red / Unbranded", price: { amount: "1500.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Red" }, { name: "Branding", value: "Unbranded" }] } },
-          { node: { id: "ms-red-branded", title: "Red / Branded", price: { amount: "2000.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Red" }, { name: "Branding", value: "Branded" }] } },
-          { node: { id: "ms-blue-unbranded", title: "Blue / Unbranded", price: { amount: "1500.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Blue" }, { name: "Branding", value: "Unbranded" }] } },
-          { node: { id: "ms-blue-branded", title: "Blue / Branded", price: { amount: "2000.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Blue" }, { name: "Branding", value: "Branded" }] } },
-          { node: { id: "ms-green-unbranded", title: "Green / Unbranded", price: { amount: "1500.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Green" }, { name: "Branding", value: "Unbranded" }] } },
-          { node: { id: "ms-green-branded", title: "Green / Branded", price: { amount: "2000.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Green" }, { name: "Branding", value: "Branded" }] } },
-          { node: { id: "ms-white-unbranded", title: "White / Unbranded", price: { amount: "1500.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "White" }, { name: "Branding", value: "Unbranded" }] } },
-          { node: { id: "ms-white-branded", title: "White / Branded", price: { amount: "2000.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "White" }, { name: "Branding", value: "Branded" }] } },
-          { node: { id: "ms-yellow-unbranded", title: "Yellow / Unbranded", price: { amount: "1500.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Yellow" }, { name: "Branding", value: "Unbranded" }] } },
-          { node: { id: "ms-yellow-branded", title: "Yellow / Branded", price: { amount: "2000.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Yellow" }, { name: "Branding", value: "Branded" }] } },
+          { node: { id: "ms-red-unbranded", title: "Red / Unbranded", price: { amount: "850.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Red" }, { name: "Branding", value: "Unbranded" }] } },
+          { node: { id: "ms-red-branded", title: "Red / Branded", price: { amount: "1350.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Red" }, { name: "Branding", value: "Branded" }] } },
+          { node: { id: "ms-blue-unbranded", title: "Blue / Unbranded", price: { amount: "850.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Blue" }, { name: "Branding", value: "Unbranded" }] } },
+          { node: { id: "ms-blue-branded", title: "Blue / Branded", price: { amount: "1350.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Blue" }, { name: "Branding", value: "Branded" }] } },
+          { node: { id: "ms-green-unbranded", title: "Green / Unbranded", price: { amount: "850.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Green" }, { name: "Branding", value: "Unbranded" }] } },
+          { node: { id: "ms-green-branded", title: "Green / Branded", price: { amount: "1350.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Green" }, { name: "Branding", value: "Branded" }] } },
+          { node: { id: "ms-white-unbranded", title: "White / Unbranded", price: { amount: "850.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "White" }, { name: "Branding", value: "Unbranded" }] } },
+          { node: { id: "ms-white-branded", title: "White / Branded", price: { amount: "1350.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "White" }, { name: "Branding", value: "Branded" }] } },
+          { node: { id: "ms-yellow-unbranded", title: "Yellow / Unbranded", price: { amount: "850.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Yellow" }, { name: "Branding", value: "Unbranded" }] } },
+          { node: { id: "ms-yellow-branded", title: "Yellow / Branded", price: { amount: "1350.00", currencyCode: "KES" }, availableForSale: true, selectedOptions: [{ name: "Color", value: "Yellow" }, { name: "Branding", value: "Branded" }] } },
         ]
       },
       options: [
