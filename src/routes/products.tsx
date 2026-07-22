@@ -2,41 +2,7 @@ import { Link } from "react-router-dom";
 import { SiteLayout } from "@/components/SiteLayout";
 import { useSeo } from "@/lib/seo";
 import hero from "@/assets/hero-merch.jpg";
-
-const products = [
-  "Normal cap",
-  "Premium Polo",
-  "Polycotton polo T-shirt",
-  "Polycotton round neck Tshirt",
-  "Reflector safety wear",
-  "Sweat pant set",
-  "Puff Jackets",
-  "Diaries and notebooks",
-  "Gift set",
-  "Mugs and Glasses",
-  "Logo branding",
-  "Campaign reflector",
-  "Water bottle",
-  "Outdoor banner",
-  "Branded round neck Tshirt",
-  "Teardrop",
-  "Biro pen",
-  "Wooden crafts",
-  "Maasai fleece blankets",
-  "Vehicle branding",
-  "Media Banner",
-  "Corporate Broadbase roll-up banner",
-  "Corporate gift set",
-  "Stickers",
-  "Dry fit round neck Tshirt",
-  "Kikoi",
-  "Hoodies",
-  "Sports tracksuits",
-  "Leso pair",
-  "Safari hats",
-  "Jerseys",
-  "Maasai Shukas",
-];
+import { localProducts } from "@/data/products";
 
 export default function ProductsPage() {
   useSeo({
@@ -69,15 +35,20 @@ export default function ProductsPage() {
 
       <section className="mx-auto max-w-7xl px-6 pb-24">
         <ul className="grid grid-cols-1 gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
-          {products.map((p, i) => (
-            <li key={p} className="group flex items-center justify-between gap-6 bg-card p-7 transition-colors hover:bg-ink hover:text-cream">
-              <div>
-                <div className="text-xs text-muted-foreground group-hover:text-primary">
-                  {String(i + 1).padStart(2, "0")}
+          {localProducts.map((p, i) => (
+            <li key={p.node.id}>
+              <Link
+                to={`/product/${p.node.handle}`}
+                className="group flex h-full items-center justify-between gap-6 bg-card p-7 transition-colors hover:bg-ink hover:text-cream"
+              >
+                <div>
+                  <div className="text-xs text-muted-foreground group-hover:text-primary">
+                    {String(i + 1).padStart(2, "0")}
+                  </div>
+                  <div className="mt-2 text-display text-2xl">{p.node.title}</div>
                 </div>
-                <div className="mt-2 text-display text-2xl">{p}</div>
-              </div>
-              <span className="text-2xl text-primary opacity-0 transition-opacity group-hover:opacity-100">→</span>
+                <span className="text-2xl text-primary opacity-0 transition-opacity group-hover:opacity-100">→</span>
+              </Link>
             </li>
           ))}
         </ul>
